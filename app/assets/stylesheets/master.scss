@@ -1,5 +1,6 @@
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,200i,400,400i&display=swap');
 
 .navbar {
   font-family: "Helvetica Neue", Helvetica;
@@ -40,4 +41,17 @@ h1, h2, h3, h4, h5, h6, .navbar {
 
 .btn {
   border-radius: 0;
+}
+
+.feature {
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+body {
+  background: image_url('green_cup');
+  font-family: 'Poppins', sans-serif;
+  color: white;
+
 }
