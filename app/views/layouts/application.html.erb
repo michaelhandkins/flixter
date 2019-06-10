@@ -12,27 +12,40 @@
   <body>
 <!--- NAVBAR --->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Flixter</a>
+  <%= link_to "Flixter", root_path, class: "navbar-brand" %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+  
+    
+    <ul class="nav navbar-nav navbar-right">
+
+      <% if user_signed_in? %>
+        <li class="nav-item">
+          <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: 'nav-link' %>
+        </li>
+      
+      <% else %>
+      
+      <li class="nav-item">
+        <%= link_to "Log In", new_user_session_path, class: 'nav-link' %>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
+        <%= link_to 'Sign Up', new_user_registration_path, class: 'nav-link' %>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-      </li>
+      <% end %>
+
     </ul>
-  </div>
+
 </nav>
+
+  <% if notice.present? %>
+    <p class="alert alert-info"><%= notice %></p>
+  <% end %>
+  
+  <% if alert.present? %>
+    <p class="alert alert-danger"><%= alert %></p>
+  <% end %>
 
     <%= yield %>
   </body>
