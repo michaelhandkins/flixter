@@ -10,10 +10,15 @@
     <h2 class="text-center"><%= link_to course.title, course_path(course) %></h2>
     <br />
     <div class="row">
-      <div class="col-sm-8 col-12">
+      <% if course.image.present? %>
+      <div class="col-sm-3 col-12">
+        <%= image_tag course.image.url, class: 'index-img' %>
+      </div>
+      <% end %>
+      <div class="col-sm-7 col-12">
         <%= course.description %>
       </div>
-      <div class="col-sm-4 col-12 text-center">
+      <div class="col-sm-2 col-12 text-center">
         <%= link_to 'More Details', course_path(course), class: 'btn btn-primary btn-large' %>
       </div>
     </div>
