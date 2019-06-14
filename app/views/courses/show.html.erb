@@ -2,26 +2,43 @@
 
 <div class="booyah-box col-10 offset-1">
   <br />
-  <h1 class="text-center"><%= current_course.title %></h1>
+  <h1 class="text-center"><%= @course.title %></h1>
   <hr />
   <br />
   
   <div class="row">
     <div class="col-sm-4 col-12 text-center">
       <span class="badge badge-success">
-        <%= number_to_currency current_course.cost %>
+        <%= number_to_currency @course.cost %>
       </span>
 
       <br /><br />
-      <% if current_user && current_user == current_course.user %>
-        <%= link_to "Administer Course", instructor_course_path(current_course), class: 'btn btn-danger' %>
+      <% if current_user && current_user == @course.user %>
+        <%= link_to "Administer Course", instructor_course_path(@course), class: 'btn btn-danger' %>
         <% end %>
       <br /><br />
     </div>
 
     <div class="col-sm-8 col-12">
-      <%= current_course.description %>
+      <%= @course.description %>
     </div>
+  </div>
+
+  <div class='col-12'>
+    <% @course.sections.each do |section| %>
+      <div class="section">
+        <%= section.title %>
+        <% section.lessons.each do |lesson| %>
+          <div class="lesson">
+            <%= link_to lesson_path(lesson) do %>
+            <b><%= lesson.title %></b>
+            -
+            <%= lesson.subtitle %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
   </div>
 
 
