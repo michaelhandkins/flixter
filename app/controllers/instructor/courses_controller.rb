@@ -18,7 +18,8 @@ before_action :require_authorized_for_current_course, only: [:show]
   end
 
   def show
-    
+    @section = Section.new
+    @lesson = Lesson.new
   end
 
 
@@ -32,6 +33,11 @@ before_action :require_authorized_for_current_course, only: [:show]
   helper_method :current_course
   def current_course
     @current_course ||= Course.find(params[:id])
+  end
+
+  helper_method :current_section
+  def current_section
+    @current_section = Section.find(params[:section_id])
   end
 
   def require_authorized_for_current_course
