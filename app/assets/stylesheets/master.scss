@@ -1,6 +1,8 @@
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,200i,400,400i&display=swap');
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 .navbar {
   font-family: "Helvetica Neue", Helvetica;
@@ -115,4 +117,42 @@ body {
   border: 1px solid;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
   padding: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.section-li {
+  border: 1px solid;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  padding: 20px;
+}
+
+ul .header {
+  font-size: 25px;
+}
+
+ul .header .fas {
+  font-size: 18px;
+}
+
+.lessons li {
+  background: black;
+  color: white;
+  margin: 10px;
+  font-family: "Helvetica Neue", Helvetica;
+  font-weight: 100;
+  padding: 7px;
+  font-size: 15px;
+  margin: 20px;
+}
+
+.lessons li b {
+  font-size: 25px;
+  font-weight: 100;
+}
+
+.lessons li p {
+  margin: 0;
 }
