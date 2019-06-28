@@ -1,6 +1,7 @@
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,200i,400,400i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=DM+Serif+Text&display=swap');
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
@@ -8,7 +9,7 @@
   font-family: "Helvetica Neue", Helvetica;
   font-weight: 150;
   box-shadow: 1px 2px 2px #2a2a2a;
-  background: image_url('prism.png');
+  background: image_url('memphis');
 }
 
 .navbar-brand {
@@ -52,14 +53,14 @@ h1, h2, h3, h4, h5, h6, .navbar {
 }
 
 body {
-  background: image_url('green_cup');
+  background: image_url('background');
   font-family: 'Poppins', sans-serif;
   color: white;
 
 }
 
 .booyah-box h1 {
-  font-family: 'Pacifico', cursive;
+  font-family: 'DM Serif Text', serif;
   font-weight: 200;
 }
 
@@ -171,4 +172,14 @@ ul .header .fas {
 
 .social a:hover {
   text-decoration: none;
+}
+
+.team-pic {
+  max-height: 200px;
+  width: auto;
+  border-radius: 50%;
+}
+
+.course-catalog a {
+  color: #08a80e;
 }
