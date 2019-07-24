@@ -19,15 +19,19 @@ Technologies Used:
 Interface
 ---------
 
-After signing up as a registered user of the platform, users may become instructors by deciding to "Create a Course" with a title, description, and cover image.
+After signing up as a registered user of the platform, users may become instructors by deciding to "Teach a Course" with a title, description, and cover image.
 
 ![](images/create.PNG)
 
 From the view of their newly created course page, instructors will see the option to "Administer Course."
 
+![](images/administer.PNG)
+
+From there, they will have the ability to add new sections and lessons to their course... 
+
 ![](images/newlesson.PNG)
 
-From there, they will have the ability to rearrage sections and lessons in whatever order they choose via the drag and drop interface.
+...as well as rearrange sections and lessons in whatever order they choose via the drag and drop interface.
 
 ![](images/draganddrop.PNG)
 
